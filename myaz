@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -e
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+
+if [[ -z "$1" ]]; then
+    echo "Available commands:"
+    for file in "$DIR"/*; do
+        [[ -x "$file" && ! -d "$file" && "$file" != "$DIR/myaz" ]] && echo "  $(basename "$file")"
+    done
+    exit 0
+fi
+
+
+SCRIPT_NAME="$1"
+shift  
+
+TARGET_SCRIPT="$DIR/$SCRIPT_NAME"
+
+if [[ -x "$TARGET_SCRIPT" ]]; then
+    "$TARGET_SCRIPT" "$@"
+else
+    echo "Error: '$SCRIPT_NAME' not found or not executable in $DIR"
+    echo "ls "
+    exit 1
+fi
