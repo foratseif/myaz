@@ -2,10 +2,9 @@
 ### dependencies
 - ```az```
 - ```account``` extention for ```az```
-    - install with ```az extension add --name account```
+    - (install with ```az extension add --name account```)
 - ```jq``` is needed for scripts to process json
 - ```fzf``` for interactive scripts
-    - install with ```brew``` or something.
 
 
 ### How to run
