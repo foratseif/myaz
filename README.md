@@ -1,9 +1,10 @@
 
 ### dependencies
-- You need ```az```
-- ```az``` ```account``` extention
+- ```az```
+- ```account``` extention for ```az```
     - install with ```az extension add --name account```
-- Also ```fzf``` for interactive scripts
+- ```jq``` is needed for scripts to process json
+- ```fzf``` for interactive scripts
     - install with ```brew``` or something.
 
 
