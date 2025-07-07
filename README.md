@@ -8,8 +8,9 @@
 
 
 ### How to run
-Run scripts directly or add ```myaz``` to your path
+<b>Recommended:</b> symlink ```myaz``` to a place that is in your ```$PATH```.
 
+But you can scripts directly or add the whole directory to your path.
 
 ```
 $ myaz 
