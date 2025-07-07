@@ -14,11 +14,15 @@ But you can run scripts directly or add the whole directory to your path. You do
 
 ```
 $ myaz 
-$ myaz get-secret [vault] [secret]
 $ myaz get-secret-interactive
+$ myaz list-vaults 
+$ myaz list-secrets [vault] 
+$ myaz get-secret [vault] [secret]
 
 or
 
-$ get-secret [vault] [secret]
 $ get-secret-interactive
+$ list-vaults 
+$ list-secrets [vault] 
+$ get-secret [vault] [secret]
 ```
