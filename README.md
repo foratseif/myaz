@@ -1,5 +1,5 @@
 
-### dependencies
+### Dependencies
 - ```az```
 - ```account``` extention for ```az```
     - (install with ```az extension add --name account```)
@@ -7,7 +7,7 @@
 - ```fzf``` for interactive scripts
 
 
-### how to run
+### How to run
 <b>Recommended:</b> symlink ```myaz``` to a place that is in your ```$PATH```.
 
 But you can run scripts directly or add the whole directory to your path. You do you.
