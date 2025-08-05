@@ -7,7 +7,7 @@
 - ```fzf``` for interactive scripts
 
 
-### How to run
+### how to run
 <b>Recommended:</b> symlink ```myaz``` to a place that is in your ```$PATH```.
 
 But you can run scripts directly or add the whole directory to your path. You do you.
