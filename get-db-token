@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e
+
+if ! az account show > /dev/null 2>&1; then
+  echo "You are not logged in. Please run 'az login'." >&2
+fi
+
+az account get-access-token --resource https://ossrdbms-aad.database.windows.net --query accessToken -o tsv
