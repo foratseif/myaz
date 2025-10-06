@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -e
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+choice=$("$SCRIPT_DIR/list-sub" | fzf --prompt "Choose subscription: ")
+
+IFS=' '
+read -r -a arr <<< "$choice"
+sub=${arr[0]}
+
+if [ -n "$sub" ]; then
+  echo "subscription = '$sub'" >&2
+else
+  echo "err: You need to select a subscription" >&2
+  exit 1
+fi
+
+$SCRIPT_DIR/switch-sub "$sub"
